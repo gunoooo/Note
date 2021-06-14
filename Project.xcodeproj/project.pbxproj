@@ -27,20 +27,20 @@
 		4E96A9CE2674723600014EBC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9CD2674723600014EBC /* NetworkError.swift */; };
 		4E96A9D1267472CE00014EBC /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9D0267472CE00014EBC /* APIRequest.swift */; };
 		4E96A9D3267472E600014EBC /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9D2267472E600014EBC /* APIResponse.swift */; };
-		4E96A9DA267475B700014EBC /* OurTransferDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9D9267475B700014EBC /* OurTransferDTO.swift */; };
+		4E96A9DA267475B700014EBC /* OurTransferAPIDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9D9267475B700014EBC /* OurTransferAPIDTO.swift */; };
 		4E96A9DC2674764F00014EBC /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9DB2674764F00014EBC /* APIError.swift */; };
 		4E96A9E12674784100014EBC /* 당행이체결과.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9E02674784100014EBC /* 당행이체결과.swift */; };
 		4E96A9E32674787900014EBC /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9E22674787900014EBC /* APIResult.swift */; };
-		4E96A9E52674795800014EBC /* OtherTransferDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9E42674795800014EBC /* OtherTransferDTO.swift */; };
+		4E96A9E52674795800014EBC /* OtherTransferAPIDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9E42674795800014EBC /* OtherTransferAPIDTO.swift */; };
 		4E96A9E7267479B600014EBC /* 타행이체결과.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9E6267479B600014EBC /* 타행이체결과.swift */; };
-		4E96A9EB26747F6800014EBC /* RequestOnePassManagerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9EA26747F6800014EBC /* RequestOnePassManagerDTO.swift */; };
+		4E96A9EB26747F6800014EBC /* RequestOnePassLibraryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9EA26747F6800014EBC /* RequestOnePassLibraryDTO.swift */; };
 		4E96A9ED26747F8B00014EBC /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9EC26747F8B00014EBC /* AuthData.swift */; };
 		4E96A9EF26747F9600014EBC /* FidoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9EE26747F9600014EBC /* FidoData.swift */; };
 		4E96A9F126747FDA00014EBC /* LibraryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9F026747FDA00014EBC /* LibraryResult.swift */; };
 		4E96A9F326747FFA00014EBC /* LibraryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9F226747FFA00014EBC /* LibraryError.swift */; };
 		4E96A9F72674817900014EBC /* OnePassManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9F62674817900014EBC /* OnePassManagerProtocol.swift */; };
 		4E96A9FA2674841B00014EBC /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9F92674841B00014EBC /* AuthAPI.swift */; };
-		4E96A9FD2674845C00014EBC /* RequestTridDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9FC2674845C00014EBC /* RequestTridDTO.swift */; };
+		4E96A9FD2674845C00014EBC /* RequestTridAPIDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9FC2674845C00014EBC /* RequestTridAPIDTO.swift */; };
 		4E96A9FF2674865B00014EBC /* BakingWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96A9FE2674865B00014EBC /* BakingWorker.swift */; };
 		4E96AA012674867000014EBC /* AuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96AA002674867000014EBC /* AuthWorker.swift */; };
 		4E96AA04267486D200014EBC /* BankingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E96AA03267486D200014EBC /* BankingError.swift */; };
@@ -99,20 +99,20 @@
 		4E96A9CD2674723600014EBC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		4E96A9D0267472CE00014EBC /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		4E96A9D2267472E600014EBC /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
-		4E96A9D9267475B700014EBC /* OurTransferDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurTransferDTO.swift; sourceTree = "<group>"; };
+		4E96A9D9267475B700014EBC /* OurTransferAPIDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurTransferAPIDTO.swift; sourceTree = "<group>"; };
 		4E96A9DB2674764F00014EBC /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		4E96A9E02674784100014EBC /* 당행이체결과.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "당행이체결과.swift"; sourceTree = "<group>"; };
 		4E96A9E22674787900014EBC /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
-		4E96A9E42674795800014EBC /* OtherTransferDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTransferDTO.swift; sourceTree = "<group>"; };
+		4E96A9E42674795800014EBC /* OtherTransferAPIDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTransferAPIDTO.swift; sourceTree = "<group>"; };
 		4E96A9E6267479B600014EBC /* 타행이체결과.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "타행이체결과.swift"; sourceTree = "<group>"; };
-		4E96A9EA26747F6800014EBC /* RequestOnePassManagerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOnePassManagerDTO.swift; sourceTree = "<group>"; };
+		4E96A9EA26747F6800014EBC /* RequestOnePassLibraryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOnePassLibraryDTO.swift; sourceTree = "<group>"; };
 		4E96A9EC26747F8B00014EBC /* AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
 		4E96A9EE26747F9600014EBC /* FidoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FidoData.swift; sourceTree = "<group>"; };
 		4E96A9F026747FDA00014EBC /* LibraryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryResult.swift; sourceTree = "<group>"; };
 		4E96A9F226747FFA00014EBC /* LibraryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryError.swift; sourceTree = "<group>"; };
 		4E96A9F62674817900014EBC /* OnePassManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePassManagerProtocol.swift; sourceTree = "<group>"; };
 		4E96A9F92674841B00014EBC /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
-		4E96A9FC2674845C00014EBC /* RequestTridDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTridDTO.swift; sourceTree = "<group>"; };
+		4E96A9FC2674845C00014EBC /* RequestTridAPIDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTridAPIDTO.swift; sourceTree = "<group>"; };
 		4E96A9FE2674865B00014EBC /* BakingWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakingWorker.swift; sourceTree = "<group>"; };
 		4E96AA002674867000014EBC /* AuthWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWorker.swift; sourceTree = "<group>"; };
 		4E96AA03267486D200014EBC /* BankingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingError.swift; sourceTree = "<group>"; };
@@ -228,7 +228,6 @@
 			children = (
 				4E96AA0F26760D3400014EBC /* UserDefaults */,
 				4E96A9B026746E7600014EBC /* Library */,
-				4E96A9AF26746E5D00014EBC /* Core */,
 				4E96A9AE26746E5700014EBC /* API */,
 			);
 			path = Service;
@@ -245,13 +244,6 @@
 				4E96A9C4267471A300014EBC /* Banking */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		4E96A9AF26746E5D00014EBC /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		4E96A9B026746E7600014EBC /* Library */ = {
@@ -314,8 +306,8 @@
 		4E96A9D82674757C00014EBC /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				4E96A9D9267475B700014EBC /* OurTransferDTO.swift */,
-				4E96A9E42674795800014EBC /* OtherTransferDTO.swift */,
+				4E96A9D9267475B700014EBC /* OurTransferAPIDTO.swift */,
+				4E96A9E42674795800014EBC /* OtherTransferAPIDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -343,7 +335,7 @@
 		4E96A9E926747F5100014EBC /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				4E96A9EA26747F6800014EBC /* RequestOnePassManagerDTO.swift */,
+				4E96A9EA26747F6800014EBC /* RequestOnePassLibraryDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -376,7 +368,7 @@
 		4E96A9FB2674841E00014EBC /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				4E96A9FC2674845C00014EBC /* RequestTridDTO.swift */,
+				4E96A9FC2674845C00014EBC /* RequestTridAPIDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -550,7 +542,7 @@
 			files = (
 				4E96A98126746E2100014EBC /* ViewController.swift in Sources */,
 				4E96A97D26746E2100014EBC /* AppDelegate.swift in Sources */,
-				4E96A9EB26747F6800014EBC /* RequestOnePassManagerDTO.swift in Sources */,
+				4E96A9EB26747F6800014EBC /* RequestOnePassLibraryDTO.swift in Sources */,
 				4E96A9C32674719E00014EBC /* BakingAPI.swift in Sources */,
 				4E96A9C9267471ED00014EBC /* NetworkManager.swift in Sources */,
 				4E96A9BC2674706200014EBC /* TransferModels.swift in Sources */,
@@ -569,9 +561,9 @@
 				4E96A9EF26747F9600014EBC /* FidoData.swift in Sources */,
 				4E96AA06267486D900014EBC /* AuthError.swift in Sources */,
 				4E96AA0B2674A74400014EBC /* Result.swift in Sources */,
-				4E96A9FD2674845C00014EBC /* RequestTridDTO.swift in Sources */,
+				4E96A9FD2674845C00014EBC /* RequestTridAPIDTO.swift in Sources */,
 				4E96AA1C267613D400014EBC /* LoginUserDefaults.swift in Sources */,
-				4E96A9DA267475B700014EBC /* OurTransferDTO.swift in Sources */,
+				4E96A9DA267475B700014EBC /* OurTransferAPIDTO.swift in Sources */,
 				4E96A9CE2674723600014EBC /* NetworkError.swift in Sources */,
 				4E96A9E32674787900014EBC /* APIResult.swift in Sources */,
 				4E96A9ED26747F8B00014EBC /* AuthData.swift in Sources */,
@@ -588,7 +580,7 @@
 				4E96AA0E26760C1100014EBC /* BankState.swift in Sources */,
 				4E96AA1226760D6D00014EBC /* AuthUserDefaults.swift in Sources */,
 				4E96A9CB2674721500014EBC /* NetworkResult.swift in Sources */,
-				4E96A9E52674795800014EBC /* OtherTransferDTO.swift in Sources */,
+				4E96A9E52674795800014EBC /* OtherTransferAPIDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

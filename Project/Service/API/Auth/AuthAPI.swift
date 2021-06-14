@@ -19,7 +19,7 @@ class AuthAPI: AuthAPIProtocol {
     }
     
     func requestTrid(completion: @escaping (RequestTridAPIResult) -> Void) {
-        networkManager.request(RequestTridAPIRequest()) { (result: RequestTridNetworkResult) in
+        networkManager.request(RequestTridAPIRequest()) { (result: NetworkResult<RequestTridAPIResponse>) in
             switch result {
                 case .success(let response):
                     completion(.success(FidoData(trid: response.body.trid)))

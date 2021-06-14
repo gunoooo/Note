@@ -26,7 +26,7 @@ class LoginWorker: LoginWorkerProtocol {
         if let loginType = loginUserDefaults.preLoginType {
             completion(.success(loginType))
         } else {
-            completion(.failure(.로그인수단확인불가))
+            completion(.failure(._로그인수단확인불가))
         }
     }
 }

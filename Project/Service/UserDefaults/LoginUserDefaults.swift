@@ -14,7 +14,7 @@ protocol LoginUserDefaultsProtocol {
 class LoginUserDefaults: LoginUserDefaultsProtocol {
     var preLoginType: LoginType? {
         get {
-            return .간편비밀번호
+            return ._간편비밀번호
         }
         set {
             

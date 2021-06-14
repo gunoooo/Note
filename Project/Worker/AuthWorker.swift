@@ -22,7 +22,7 @@ class AuthWorker: AuthWorkerProtocol {
     var onePassLibrary: OnePassLibraryProtocol
     var authUserDefaults: AuthUserDefaultsProtocol
     
-    var loginType: LoginType = .패턴
+    var loginType: LoginType = ._패턴
     
     init(
         authApi: AuthAPIProtocol = AuthAPI(),
@@ -37,9 +37,9 @@ class AuthWorker: AuthWorkerProtocol {
     var isLock: Bool {
         set {
             switch loginType {
-                case .간편비밀번호:
+                case ._간편비밀번호:
                     authUserDefaults.isPinLock = newValue
-                case .패턴:
+                case ._패턴:
                     authUserDefaults.isPatternLock = newValue
                 default:
                     break
@@ -47,9 +47,9 @@ class AuthWorker: AuthWorkerProtocol {
         }
         get {
             switch loginType {
-                case .간편비밀번호:
+                case ._간편비밀번호:
                     return authUserDefaults.isPinLock
-                case .패턴:
+                case ._패턴:
                     return authUserDefaults.isPatternLock
                 default:
                     return false
@@ -61,7 +61,7 @@ class AuthWorker: AuthWorkerProtocol {
     
     /// 유효시간 체크 후 만료된 경우 세션초과 에러 리턴
     @objc private func checkEffectiveTime(_ notification: Notification) {
-        fetchTridCompletion?(.failure(.백그라운드세션초과))
+        fetchTridCompletion?(.failure(._백그라운드세션초과))
     }
     
     func fetchTrid(completion: @escaping (FetchTridResult) -> Void) {
@@ -85,26 +85,26 @@ class AuthWorker: AuthWorkerProtocol {
     }
     
     func requestOnePass(trid: String, completion: @escaping (RequestOnePassResult) -> Void) {
-        onePassLibrary.requestOnePassManager(trid: trid) { result in
+        onePassLibrary.requestOnePass(trid: trid) { result in
             switch result {
                 case .success(let authData):
                     completion(.success(authData))
                 case .failure(let error):
                     switch error {
-                        case .사용자취소(let errorCode):
-                            completion(.failure(.사용자취소(errorCode)))
-                        case .정보변경(let errorCode):
-                            completion(.failure(.정보변경(errorCode)))
-                        case .오류횟수초과(let errorCode):
-                            completion(.failure(.오류횟수초과(errorCode)))
-                        case .네트워크연결오류(let errorCode):
-                            completion(.failure(.네트워크연결오류(errorCode)))
-                        case .휴대폰미설정(let errorCode):
-                            completion(.failure(.휴대폰미설정(errorCode)))
-                        case .인증불일치(let errorCode):
-                            completion(.failure(.인증불일치(errorCode)))
-                        case .세션초과(let errorCode):
-                            completion(.failure(.세션초과(errorCode)))
+                        case ._사용자취소(let errorCode):
+                            completion(.failure(._사용자취소(errorCode)))
+                        case ._정보변경(let errorCode):
+                            completion(.failure(._정보변경(errorCode)))
+                        case ._오류횟수초과(let errorCode):
+                            completion(.failure(._오류횟수초과(errorCode)))
+                        case ._네트워크연결오류(let errorCode):
+                            completion(.failure(._네트워크연결오류(errorCode)))
+                        case ._휴대폰미설정(let errorCode):
+                            completion(.failure(._휴대폰미설정(errorCode)))
+                        case ._인증불일치(let errorCode):
+                            completion(.failure(._인증불일치(errorCode)))
+                        case ._세션초과(let errorCode):
+                            completion(.failure(._세션초과(errorCode)))
                         case .defaultError(let errorValue):
                             completion(.failure(.defaultError(errorValue)))
                     }

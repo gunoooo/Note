@@ -8,5 +8,5 @@
 protocol LoginError: SHBError {}
 
 enum FetchLoginTypeError: LoginError {
-    case 로그인수단확인불가
+    case _로그인수단확인불가
 }

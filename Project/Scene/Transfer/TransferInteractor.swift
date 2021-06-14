@@ -48,7 +48,7 @@ class TransferInteractor: TransferBusinessLogic, TransferDataStore {
             }
         }
         if authWorker.isLock {
-            self.presenter?.presentAuthResult(response: .init(error: .인증수단잠김))
+            self.presenter?.presentAuthResult(response: .init(error: ._인증수단잠김))
             return
         }
         authWorker.fetchTrid() { [weak self] fetchTridResult in
@@ -76,7 +76,7 @@ class TransferInteractor: TransferBusinessLogic, TransferDataStore {
         // 타행/당행 체크
         let bankState = bankingWorker.fetchBankState(bankCode: request.bankCode)
         switch bankState {
-            case .당행:
+            case ._당행:
                 bankingWorker.ourTransfer(amount: request.amount) { [weak self] ourTransferResult in
                     switch ourTransferResult {
                         case .success(let _당행이체결과):
@@ -85,7 +85,7 @@ class TransferInteractor: TransferBusinessLogic, TransferDataStore {
                             self?.presenter?.presentTransferResult(response: .init(error: .ourTransferError(error)))
                     }
                 }
-            case .타행:
+            case ._타행:
                 bankingWorker.otherTransfer(amount: request.amount) { [weak self] ourTransferResult in
                     switch ourTransferResult {
                         case .success(let _타행이체결과):

@@ -25,7 +25,7 @@ enum TransferModels {
             var errorMessage: String?
         }
         enum Error {
-            case 인증수단잠김
+            case _인증수단잠김
             case fetchLoginTypeError (FetchLoginTypeError)
             case fetchTridError (FetchTridError)
             case reqeustOnePassError (RequestOnePassError)

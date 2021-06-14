@@ -8,6 +8,6 @@
 import Foundation
 
 enum BankState {
-    case 타행
-    case 당행
+    case _타행
+    case _당행
 }

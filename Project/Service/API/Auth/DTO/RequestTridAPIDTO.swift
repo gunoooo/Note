@@ -20,8 +20,6 @@ struct RequestTridAPIResponse {
     }
 }
 
-typealias RequestTridNetworkResult = NetworkResult<RequestTridAPIResponse>
-
 enum RequestTridAPIError: APIError {
     case networkError (APINetworkError)
 }

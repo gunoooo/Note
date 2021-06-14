@@ -22,11 +22,9 @@ struct OurTransferAPIResponse {
     }
 }
 
-typealias OurTransferNetworkResult = NetworkResult<OurTransferAPIResponse>
-
 enum OurTransferAPIError: APIError {
-    case 잔액부족
-    case 계좌조회오류
+    case _잔액부족
+    case _계좌조회오류
     case networkError (APINetworkError)
 }
 

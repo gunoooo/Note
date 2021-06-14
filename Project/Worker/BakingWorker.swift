@@ -24,7 +24,7 @@ class BankingWorker: BankingWorkerProtocol {
     }
     
     func fetchBankState(bankCode: String) -> BankState {
-        return .당행
+        return ._당행
     }
     
     func ourTransfer(amount: Int, completion: @escaping (OurTransferResult) -> Void) {
@@ -34,10 +34,10 @@ class BankingWorker: BankingWorkerProtocol {
                     completion(.success(_당행이체결과))
                 case .failure(let error):
                     switch error {
-                        case .잔액부족:
-                            completion(.failure(.잔액부족))
-                        case .계좌조회오류:
-                            completion(.failure(.계좌조회오류))
+                        case ._잔액부족:
+                            completion(.failure(._잔액부족))
+                        case ._계좌조회오류:
+                            completion(.failure(._계좌조회오류))
                         case .networkError(let networkError):
                             completion(.failure(.networkError(networkError)))
                     }
@@ -52,12 +52,12 @@ class BankingWorker: BankingWorkerProtocol {
                     completion(.success(_타행이체결과))
                 case .failure(let error):
                     switch error {
-                        case .잔액부족:
-                            completion(.failure(.잔액부족))
-                        case .계좌조회오류:
-                            completion(.failure(.계좌조회오류))
-                        case .타행점검시간:
-                            completion(.failure(.타행점검시간))
+                        case ._잔액부족:
+                            completion(.failure(._잔액부족))
+                        case ._계좌조회오류:
+                            completion(.failure(._계좌조회오류))
+                        case ._타행점검시간:
+                            completion(.failure(._타행점검시간))
                         case .networkError(let networkError):
                             completion(.failure(.networkError(networkError)))
                     }

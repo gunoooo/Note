@@ -8,7 +8,7 @@
 import Foundation
 
 protocol OnePassLibraryProtocol {
-    func requestOnePassManager(trid: String, completion: @escaping (RequestOnePassManagerResult) -> Void)
+    func requestOnePass(trid: String, completion: @escaping (RequestOnePassManagerResult) -> Void)
 }
 
 class OnePassLibrary: OnePassLibraryProtocol {
@@ -18,9 +18,9 @@ class OnePassLibrary: OnePassLibraryProtocol {
         self.onePassManager = onePassManager
     }
     
-    func requestOnePassManager(trid: String, completion: @escaping (RequestOnePassManagerResult) -> Void) {
+    func requestOnePass(trid: String, completion: @escaping (RequestOnePassManagerResult) -> Void) {
         onePassManager.request(trid)
         
-        completion(.failure(.네트워크연결오류("")))
+        completion(.failure(._네트워크연결오류("")))
     }
 }

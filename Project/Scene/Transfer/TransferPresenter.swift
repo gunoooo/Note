@@ -25,12 +25,12 @@ class TransferPresenter: TransferPresentationLogic {
             switch error {
                 case .fetchLoginTypeError(let fetchLoginTypeError):
                     switch fetchLoginTypeError {
-                        case .로그인수단확인불가:
+                        case ._로그인수단확인불가:
                             displayAuthError("일시적인 오류가 발생하였습니다\n[로그인수단확인불가]")
                     }
                 case .fetchTridError(let fetchTridError):
                     switch fetchTridError {
-                        case .백그라운드세션초과:
+                        case ._백그라운드세션초과:
                             displayAuthError("세션이 만료되었습니다")
                         case .networkError(let networkError):
                             networkError.perform({ [weak self] errorValue in
@@ -41,30 +41,30 @@ class TransferPresenter: TransferPresentationLogic {
                     }
                 case .reqeustOnePassError(let requestOnePassError):
                     switch requestOnePassError {
-                        case .데이터처리오류:
+                        case ._데이터처리오류:
                             displayAuthError("데이터 처리중 오류가 발생하였습니다")
-                        case .인증키오류:
+                        case ._인증키오류:
                             displayAuthError("데이터 처리중 오류가 발생하였습니다")
-                        case .사용자취소(let errorCode):
+                        case ._사용자취소(let errorCode):
                             displayAuthError("취소되었습니다 (\(errorCode))")
-                        case .정보변경(let errorCode):
+                        case ._정보변경(let errorCode):
                             displayAuthError("정보가 변경되었습니다. 다시 시도해주세요 (\(errorCode))")
-                        case .오류횟수초과(let errorCode):
+                        case ._오류횟수초과(let errorCode):
                             displayAuthError("오류횟수가 초과되었습니다. 다시 시도해주세요 ((\(errorCode))")
-                        case .네트워크연결오류(let errorCode):
+                        case ._네트워크연결오류(let errorCode):
                             displayAuthError("네트워크 연결이 좋지 않습니다 (\(errorCode))")
-                        case .휴대폰미설정(let errorCode):
+                        case ._휴대폰미설정(let errorCode):
                             displayAuthError("인증수단을 등록해주세요 (\(errorCode))")
-                        case .인증불일치(let errorCode):
+                        case ._인증불일치(let errorCode):
                             displayAuthError("인증에 실패하였습니다 (\(errorCode))")
-                        case .세션초과(let errorCode):
+                        case ._세션초과(let errorCode):
                             displayAuthError("세션이 만료되었습니다 (\(errorCode))")
                         case .defaultError(let errorValue):
                             displayAuthError(
                                 "일시적인 오류가 발생하였습니다\n\(errorValue.errorMessage)(\(errorValue.errorCode))"
                             )
                     }
-                case .인증수단잠김:
+                case ._인증수단잠김:
                     displayAuthError("인증수단 실패횟수가 4회를 초과하였습니다")
             }
         } else {
@@ -77,9 +77,9 @@ class TransferPresenter: TransferPresentationLogic {
             switch error {
                 case .ourTransferError(let ourTransferError):
                     switch ourTransferError {
-                        case .잔액부족:
+                        case ._잔액부족:
                             displayTransferError("잔액이 부족합니다")
-                        case .계좌조회오류:
+                        case ._계좌조회오류:
                             displayTransferError("계좌 조회중 오류가 발생하였습니다")
                         case .networkError(let networkError):
                             networkError.perform({ [weak self] errorValue in
@@ -90,11 +90,11 @@ class TransferPresenter: TransferPresentationLogic {
                     }
                 case .otherTransferError(let otherTransferError):
                     switch otherTransferError {
-                        case .타행점검시간:
+                        case ._타행점검시간:
                             displayTransferError("점검시간입니다")
-                        case .잔액부족:
+                        case ._잔액부족:
                             displayTransferError("잔액이 부족합니다")
-                        case .계좌조회오류:
+                        case ._계좌조회오류:
                             displayTransferError("계좌 조회중 오류가 발생하였습니다")
                         case .networkError(let networkError):
                             networkError.perform({ [weak self] errorValue in

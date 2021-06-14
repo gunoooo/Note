@@ -8,7 +8,7 @@
 import Foundation
 
 enum LoginType {
-    case 패턴
-    case 간편비밀번호
-    case 공인인증서
+    case _패턴
+    case _간편비밀번호
+    case _공인인증서
 }
