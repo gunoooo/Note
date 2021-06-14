@@ -91,6 +91,10 @@ class AuthWorker: AuthWorkerProtocol {
                     completion(.success(authData))
                 case .failure(let error):
                     switch error {
+                        case ._인증키오류:
+                            completion(.failure(._인증키오류))
+                        case ._데이터처리오류:
+                            completion(.failure(._데이터처리오류))
                         case ._사용자취소(let errorCode):
                             completion(.failure(._사용자취소(errorCode)))
                         case ._정보변경(let errorCode):

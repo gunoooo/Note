@@ -8,6 +8,8 @@
 import Foundation
 
 enum RequestOnePassLibraryError: LibraryError {
+    case _데이터처리오류
+    case _인증키오류
     case _사용자취소 (ErrorCode)
     case _정보변경 (ErrorCode)
     case _오류횟수초과 (ErrorCode)

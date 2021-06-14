@@ -40,34 +40,38 @@ class TransferInteractor: TransferBusinessLogic, TransferDataStore {
     
     func auth(request: TransferModels.Auth.Request) {
         loginWorker.fetchLoginType() { [weak self] fetchLoginTypeResult in
+            guard let self = self else {
+                return
+            }
             switch fetchLoginTypeResult {
                 case .success(let loginType):
-                    self?.authWorker.loginType = loginType
-                case .failure(let error):
-                    self?.presenter?.presentAuthResult(response: .init(error: .fetchLoginTypeError(error)))
-            }
-        }
-        if authWorker.isLock {
-            self.presenter?.presentAuthResult(response: .init(error: ._인증수단잠김))
-            return
-        }
-        authWorker.fetchTrid() { [weak self] fetchTridResult in
-            switch fetchTridResult {
-                case .success(let fidoData):
-                    self?.authWorker.requestOnePass(trid: fidoData.trid) { [weak self] requestOnePassResult in
-                        switch requestOnePassResult {
-                            case .success(let authData):
-                                self?.presenter?.presentAuthResult(
-                                    response: .init(authData: authData)
-                                )
+                    self.authWorker.loginType = loginType
+                    
+                    if self.authWorker.isLock {
+                        self.presenter?.presentAuthResult(response: .init(error: ._인증수단잠김))
+                        return
+                    }
+                    self.authWorker.fetchTrid() { [weak self] fetchTridResult in
+                        switch fetchTridResult {
+                            case .success(let fidoData):
+                                self?.authWorker.requestOnePass(trid: fidoData.trid) { [weak self] requestOnePassResult in
+                                    switch requestOnePassResult {
+                                        case .success(let authData):
+                                            self?.presenter?.presentAuthResult(
+                                                response: .init(authData: authData)
+                                            )
+                                        case .failure(let error):
+                                            self?.presenter?.presentAuthResult(
+                                                response: .init(error: .reqeustOnePassError(error))
+                                            )
+                                    }
+                                }
                             case .failure(let error):
-                                self?.presenter?.presentAuthResult(
-                                    response: .init(error: .reqeustOnePassError(error))
-                                )
+                                self?.presenter?.presentAuthResult(response: .init(error: .fetchTridError(error)))
                         }
                     }
                 case .failure(let error):
-                    self?.presenter?.presentAuthResult(response: .init(error: .fetchTridError(error)))
+                    self.presenter?.presentAuthResult(response: .init(error: .fetchLoginTypeError(error)))
             }
         }
     }
